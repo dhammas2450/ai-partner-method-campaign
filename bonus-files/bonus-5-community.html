@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Connection Broker Community Access</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 3px solid #bd3235;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: #bd3235;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 18px;
+        }
+        .value-badge {
+            display: inline-block;
+            background: #bd3235;
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .welcome-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .welcome-box h2 {
+            color: #bd3235;
+            margin-bottom: 20px;
+        }
+        .access-steps {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .access-steps h2 {
+            color: #bd3235;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #bd3235;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .step-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #bd3235;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #9d292c;
+            transform: translateY(-2px);
+        }
+        .what-you-get {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .what-you-get h2 {
+            color: #bd3235;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .benefit-card {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .benefit-card h3 {
+            margin-bottom: 10px;
+        }
+        .benefit-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+        .rules {
+            background: rgba(255,243,205,0.1);
+            border-left: 4px solid #ffc107;
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 40px;
+        }
+        .rules h3 {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+        .rules ul {
+            margin-left: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        .rules li {
+            margin-bottom: 10px;
+        }
+        .intro-template {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        .intro-template h4 {
+            color: #bd3235;
+            margin-bottom: 15px;
+        }
+        .intro-template pre {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: monospace;
+            color: rgba(255,255,255,0.9);
+            white-space: pre-wrap;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👥 Private Connection Broker Community</h1>
+            <p>Your Network for Success</p>
+            <div class="value-badge">$997 Value</div>
+        </div>
+
+        <div class="welcome-box">
+            <h2>Welcome to the Inner Circle!</h2>
+            <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.8;">
+                You're now part of an exclusive group of Connection Brokers sharing strategies, 
+                wins, challenges, and opportunities. This is where the real growth happens.
+            </p>
+        </div>
+
+        <div class="access-steps">
+            <h2>How to Access Your Community</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Join the Discord Server</h3>
+                    <p>Click the button below to join our private Discord community. This is where daily conversations happen.</p>
+                    <a href="#" class="btn">Join Discord Community</a>
+                    <p style="margin-top: 10px; font-size: 12px; color: rgba(255,255,255,0.5);">Note: Link will be provided via email within 24 hours of purchase verification</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Introduce Yourself</h3>
+                    <p>Drop into the #introductions channel and tell us:</p>
+                    <ul style="margin-left: 20px; color: rgba(255,255,255,0.7);">
+                        <li>Your name and background</li>
+                        <li>What niche you're targeting</li>
+                        <li>Your goals as a Connection Broker</li>
+                        <li>One fun fact about you</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Mark Your Calendar</h3>
+                    <p>Weekly Q&A calls happen every <strong>Tuesday at 7 PM EST</strong>. Join live to get your questions answered.</p>
+                    <p style="margin-top: 10px;">Can't make it live? All calls are recorded and posted in the #call-recordings channel.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Set Up Notifications</h3>
+                    <p>Turn on notifications for these channels:</p>
+                    <ul style="margin-left: 20px; color: rgba(255,255,255,0.7);">
+                        <li><strong>#announcements</strong> - Important updates</li>
+                        <li><strong>#deal-opportunities</strong> - Partnership leads shared by members</li>
+                        <li><strong>#wins</strong> - Celebrate successes (and get motivated!)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-you-get">
+            <h2>What You Get as a Member</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📞</div>
+                    <h3>Weekly Q&A Calls</h3>
+                    <p>Get your specific questions answered live every Tuesday</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Deal Sharing</h3>
+                    <p>Members share partnership opportunities and leads</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Template Swaps</h3>
+                    <p>Share and get proven outreach templates</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Accountability</h3>
+                    <p>Weekly check-ins to keep you on track</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Real-Time Advice</h3>
+                    <p>Get feedback on deals, pricing, and strategy</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎉</div>
+                    <h3>Celebrate Wins</h3>
+                    <p>Share your successes and get celebrated!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h3>Community Guidelines</h3>
+            <ul>
+                <li><strong>Be supportive:</strong> We're all learning and growing together</li>
+                <li><strong>No spam:</strong> Don't promote unrelated products or services</li>
+                <li><strong>Share value:</strong> If you learn something that works, share it</li>
+                <li><strong>Respect privacy:</strong> What's shared in the group stays in the group</li>
+                <li><strong>Stay active:</strong> Lurkers get removed after 30 days of inactivity</li>
+                <li><strong>No negativity:</strong> Constructive feedback yes, complaining no</li>
+            </ul>
+        </div>
+
+        <div class="intro-template">
+            <h4>Example Introduction:</h4>
+            <pre>Hey everyone! Excited to be here.
+
+I'm [Your Name] from [Location]. Background in [your background].
+
+Decided to become a Connection Broker because [your reason]. 
+
+Targeting the [niche] niche - I have some connections there from my previous work.
+
+Goal: Hit $10K/month within 90 days.
+
+Fun fact: I once [something interesting/unique about you].
+
+Looking forward to connecting with you all!</pre>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <h3 style="margin-bottom: 20px;">Ready to Connect?</h3>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">
+                Check your email for the Discord invite link.<br>
+                If you don't receive it within 24 hours, email: dvhventuresllc@gmail.com
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 DVH Ventures LLC - For AI Partner Method Members Only</p>
+            <p style="margin-top: 10px;">This community access is non-transferable and subject to active membership</p>
+        </div>
+    </div>
+</body>
+</html>
