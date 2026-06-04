@@ -1,0 +1,144 @@
+{
+  "name": "AI Partner Method - Sales Sequence",
+  "workflowGroupId": "",
+  "domainId": "6688551acfe6ae024a58f9f6",
+  "smtpConfig": {
+    "domain": "mg.chadnicely.com",
+    "integrationId": "628e75aa84279536ff4eb41a",
+    "accountId": "668854e8cfe6ae024a58ef72"
+  },
+  "flows": [
+    {
+      "type": "SEND_EMAIL",
+      "index": 0,
+      "data": {
+        "name": "Email 1 - Introduction",
+        "subject": "The \"I don't have time\" problem",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>\"I want to make money online, but I don't have time to build a business.\"</p><p>I hear this all the time. And I get it.</p><p>Between work, family, and life... who has 40 hours a week?</p><p>But what if you could make $10,000+/month with just 30 minutes a day?</p><p>No product. No coding. No audience required.</p><p>That's what Connection Brokers are doing.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">AI Partner Method</a></p><p>Talk soon,<br>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 1,
+      "data": {
+        "waitFor": "2",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 2,
+      "data": {
+        "name": "Email 2 - Solution",
+        "subject": "Meet your new AI team",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>Imagine: 30 minutes a day checking messages, forwarding leads, sending follow-ups.</p><p>That's it. Rest of day is yours.</p><p>Month end? Collect checks from 3-5 partners paying $1,000-$5,000+ each.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">See how it works</a></p><p>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 3,
+      "data": {
+        "waitFor": "1",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 4,
+      "data": {
+        "name": "Email 3 - Features",
+        "subject": "What exactly do you get?",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>What's inside AI Partner Method:</p><ul><li>4-Step Blueprint to $10K/month</li><li>Partner Acquisition System</li><li>Deal Closing Scripts</li><li>Pricing Frameworks</li><li>30-Min/Day Structure</li><li>Scaling System</li></ul><p>Plus $2,385 in bonuses.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">Get instant access</a></p><p>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 5,
+      "data": {
+        "waitFor": "1",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 6,
+      "data": {
+        "name": "Email 4 - Social Proof",
+        "subject": "$34K in profit (first 6 months)",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>Marcus started 6 months ago with no tech background, no following.</p><p>Today: 4 AI partners, $8,500/month, on track for $34K.</p><p>He followed the Connection Broker blueprint.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">Join 5,200+ Connection Brokers</a></p><p>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 7,
+      "data": {
+        "waitFor": "1",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 8,
+      "data": {
+        "name": "Email 5 - Objections",
+        "subject": "\"But I'm not tech-savvy...\"",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>\"This sounds great, but I'm not tech-savvy. Can I really do this?\"</p><p>You do NOT need to understand AI. No coding. No technical knowledge.</p><p>Your job: Find businesses with problems, connect them with AI solutions, collect your fee.</p><p>5,200+ people are doing this. Most had ZERO tech background.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">If they can do it, so can you</a></p><p>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 9,
+      "data": {
+        "waitFor": "1",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 10,
+      "data": {
+        "name": "Email 6 - Bonuses",
+        "subject": "$2,385 in bonuses (yours free)",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>When you join through my link, you get $2,385 in exclusive bonuses:</p><ul><li>Fast-Start Partner System ($497)</li><li>Pricing Calculator ($297)</li><li>90-Day Roadmap ($397)</li><li>Outreach Swipe File ($197)</li><li>Private Community ($997)</li></ul><p>These bonuses come down soon.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">Get AI Partner Method + All Bonuses</a></p><p>Donald</p>"
+      }
+    },
+    {
+      "type": "TIMER",
+      "index": 11,
+      "data": {
+        "waitFor": "1",
+        "timeIn": "days"
+      }
+    },
+    {
+      "type": "SEND_EMAIL",
+      "index": 12,
+      "data": {
+        "name": "Email 7 - Final Call",
+        "subject": "⏰ Last chance (cart closes tonight)",
+        "from_name": "Donald Hammas",
+        "from_email": "donald",
+        "reply_to": "dvhventuresllc@gmail.com",
+        "body": "<p>Hey {{firstName|Friend}},</p><p>This is it. Last call.</p><p>$2,385 bonus package comes down at midnight.</p><p>A year from now, you'll either be making $10K+/month as a Connection Broker...</p><p>Or be in the same position wondering \"what if.\"</p><p>The choice is yours. But you have to make it before midnight.</p><p>→ <a href=\"https://ai-partner-method-sales.vercel.app\">Join now</a></p><p>To your success,<br>Donald</p>"
+      }
+    }
+  ]
+}

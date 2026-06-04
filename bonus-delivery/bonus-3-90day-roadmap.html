@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Day Scaling Roadmap & Tracker</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #bd3235;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #bd3235;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+        .value-badge {
+            display: inline-block;
+            background: #bd3235;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .income-tracker {
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .income-tracker h2 {
+            color: #bd3235;
+            margin-bottom: 20px;
+        }
+        .income-input {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .income-field {
+            text-align: center;
+        }
+        .income-field label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: rgba(255,255,255,0.7);
+        }
+        .income-field input {
+            width: 150px;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #bd3235;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.3);
+            color: white;
+        }
+        .phase {
+            background: #f9f9f9;
+            border-left: 4px solid #bd3235;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .phase h2 {
+            color: #bd3235;
+            margin: 0;
+            font-size: 22px;
+        }
+        .phase-dates {
+            color: #666;
+            font-size: 14px;
+        }
+        .week {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .week h3 {
+            color: #333;
+            margin: 0;
+            font-size: 16px;
+        }
+        .milestone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #bd3235;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .checkbox.checked {
+            background: #bd3235;
+        }
+        .goal-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .goal-box h4 {
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #bd3235;
+        }
+        .stat-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+            margin-top: 5px;
+        }
+        .print-btn {
+            display: block;
+            width: 100%;
+            background: #bd3235;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 30px 0;
+        }
+        .print-btn:hover {
+            background: #9d292c;
+        }
+        .tips {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 90-Day Scaling Roadmap & Tracker</h1>
+            <p>Week-by-Week Plan to Go From First Partner to $10K/Month</p>
+            <div class="value-badge">$397 Value</div>
+        </div>
+
+        <div class="income-tracker">
+            <h2>Your Progress Tracker</h2>
+            <div class="income-input">
+                <div class="income-field">
+                    <label>Current Monthly Income</label>
+                    <input type="number" id="currentIncome" value="0" placeholder="0">
+                </div>
+                <div class="income-field">
+                    <label>Target ($10K)</label>
+                    <input type="number" value="10000" readonly style="opacity: 0.5;">
+                </div>
+                <div class="income-field">
+                    <label>Progress</label>
+                    <input type="text" id="progressPercent" value="0%" readonly style="color: #bd3235;">
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="partnerCount">0</div>
+                <div class="stat-label">Active Partners</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgFee">$0</div>
+                <div class="stat-label">Avg. Monthly Fee</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="hoursWorked">0</div>
+                <div class="stat-label">Hours/Week</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="hourlyRate">$0</div>
+                <div class="stat-label">Effective Hourly</div>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-header">
+                <h2>🚀 PHASE 1: Foundation (Days 1-30)</h2>
+                <span class="phase-dates">Goal: 1 Partner + $1,000-$2,500/month</span>
+            </div>
+            <div class="goal-box">
+                <h4>Phase 1 Goal:</h4>
+                <p>Land your first AI partner and establish your workflow. Focus on learning, not scaling.</p>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 1: Setup & First Outreach</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Complete Bonus #1 (Fast-Start System)</div>
+                <div class="milestone"><div class="checkbox"></div> Set up tracking spreadsheet</div>
+                <div class="milestone"><div class="checkbox"></div> Identify 20 target companies</div>
+                <div class="milestone"><div class="checkbox"></div> Send first 5 outreach emails</div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 2: Follow-Up & Refinement</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Follow up with all Week 1 contacts</div>
+                <div class="milestone"><div class="checkbox"></div> Analyze response rates</div>
+                <div class="milestone"><div class="checkbox"></div> Refine outreach message based on feedback</div>
+                <div class="milestone"><div class="checkbox"></div> Send 5 new outreach emails</div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 3: First Calls & Proposals</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Schedule 2-3 discovery calls</div>
+                <div class="milestone"><div class="checkbox"></div> Use Bonus #2 to set pricing</div>
+                <div class="milestone"><div class="checkbox"></div> Send first proposal</div>
+                <div class="milestone"><div class="checkbox"></div> Continue outreach (5 more)</div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 4: Close First Partner</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Negotiate and finalize agreement</div>
+                <div class="milestone"><div class="checkbox"></div> Set up partner onboarding process</div>
+                <div class="milestone"><div class="checkbox"></div> Deliver first leads (if applicable)</div>
+                <div class="milestone"><div class="checkbox"></div> Document what worked</div>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-header">
+                <h2>📊 PHASE 2: Optimization (Days 31-60)</h2>
+                <span class="phase-dates">Goal: 2-3 Partners + $3,000-$7,500/month</span>
+            </div>
+            <div class="goal-box">
+                <h4>Phase 2 Goal:</h4>
+                <p>Systematize your process and land partners 2-3 while maintaining quality.</p>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 5-6: Systematize</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Create email templates for common scenarios</div>
+                <div class="milestone"><div class="checkbox"></div> Build simple CRM workflow</div>
+                <div class="milestone"><div class="checkbox"></div> Document your 30-minute daily routine</div>
+                <div class="milestone"><div class="checkbox"></div> Land Partner #2</div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 7-8: Scale Outreach</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Increase outreach to 10 contacts/week</div>
+                <div class="milestone"><div class="checkbox"></div> Test new niches/industries</div>
+                <div class="milestone"><div class="checkbox"></div> Join Bonus #5 Community for support</div>
+                <div class="milestone"><div class="checkbox"></div> Land Partner #3</div>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-header">
+                <h2>🎯 PHASE 3: Acceleration (Days 61-90)</h2>
+                <span class="phase-dates">Goal: 4-5 Partners + $10,000+/month</span>
+            </div>
+            <div class="goal-box">
+                <h4>Phase 3 Goal:</h4>
+                <p>Hit $10K/month and prepare for potential team/scaling decisions.</p>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 9-10: Optimize & Expand</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Review all partners - any issues to address?</div>
+                <div class="milestone"><div class="checkbox"></div> Increase fees for new partners (use experience)</div>
+                <div class="milestone"><div class="checkbox"></div> Systematize lead generation process</div>
+                <div class="milestone"><div class="checkbox"></div> Land Partner #4</div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">
+                    <h3>Week 11-12: Hit $10K & Evaluate</h3>
+                </div>
+                <div class="milestone"><div class="checkbox"></div> Land Partner #5 (or increase existing fees)</div>
+                <div class="milestone"><div class="checkbox"></div> Hit $10,000/month milestone! 🎉</div>
+                <div class="milestone"><div class="checkbox"></div> Document your complete system</div>
+                <div class="milestone"><div class="checkbox"></div> Plan for scale: Team? Higher fees? More partners?</div>
+            </div>
+        </div>
+
+        <div class="tips">
+            <h4>💡 Success Tips:</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Track everything - data tells the story</li>
+                <li>Focus on partner quality over quantity</li>
+                <li>Raise prices as you gain experience</li>
+                <li>Join the community for accountability</li>
+                <li>Celebrate small wins along the way</li>
+            </ul>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">Print/Save This Roadmap</button>
+
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 12px;">
+            © 2025 DVH Ventures LLC - For AI Partner Method Members Only
+        </div>
+    </div>
+
+    <script>
+        function updateTracker() {
+            const current = parseInt(document.getElementById('currentIncome').value) || 0;
+            const target = 10000;
+            const percent = Math.min(100, Math.round((current / target) * 100));
+            document.getElementById('progressPercent').value = percent + '%';
+
+            // Estimate stats
+            const avgFee = current > 0 ? Math.round(current / Math.max(1, Math.ceil(current / 2500))) : 0;
+            const partners = avgFee > 0 ? Math.round(current / avgFee) : 0;
+            const hours = partners * 0.5; // 30 min per partner per week
+            const hourly = hours > 0 ? Math.round(current / (hours * 4)) : 0;
+
+            document.getElementById('partnerCount').textContent = partners;
+            document.getElementById('avgFee').textContent = '$' + avgFee.toLocaleString();
+            document.getElementById('hoursWorked').textContent = hours.toFixed(1);
+            document.getElementById('hourlyRate').textContent = '$' + hourly.toLocaleString();
+        }
+
+        document.getElementById('currentIncome').addEventListener('input', updateTracker);
+        document.querySelectorAll('.checkbox').forEach(cb => {
+            cb.addEventListener('click', function() {
+                this.classList.toggle('checked');
+            });
+        });
+
+        updateTracker();
+    </script>
+</body>
+</html>

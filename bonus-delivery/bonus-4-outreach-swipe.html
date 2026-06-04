@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The "Quick Win" Outreach Swipe File</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #bd3235;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #bd3235;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+        .value-badge {
+            display: inline-block;
+            background: #bd3235;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .intro {
+            background: #f9f9f9;
+            padding: 25px;
+            border-left: 4px solid #bd3235;
+            margin-bottom: 30px;
+        }
+        .template {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            margin: 25px 0;
+            overflow: hidden;
+        }
+        .template-header {
+            background: #1a1a2e;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .template-number {
+            background: #bd3235;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .template-name {
+            font-weight: 600;
+            flex: 1;
+            margin-left: 15px;
+        }
+        .template-type {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+        }
+        .template-body {
+            padding: 25px;
+        }
+        .subject-line {
+            background: #f0f0f0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .email-body {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+        }
+        .copy-btn {
+            display: inline-block;
+            background: #bd3235;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .copy-btn:hover {
+            background: #9d292c;
+        }
+        .tips {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .category-title {
+            background: #1a1a2e;
+            color: white;
+            padding: 15px 25px;
+            margin: 40px 0 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .placeholder {
+            color: #bd3235;
+            font-weight: 600;
+        }
+        .usage-guide {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .copy-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💬 The "Quick Win" Outreach Swipe File</h1>
+            <p>20 Proven Messages That Have Landed 6-Figure Partnership Deals</p>
+            <div class="value-badge">$197 Value</div>
+        </div>
+
+        <div class="intro">
+            <h3>How to Use This Swipe File</h3>
+            <p><strong>1. Customize the placeholders</strong> (shown in <span class="placeholder">[red brackets]</span>)</p>
+            <p><strong>2. Make it your own</strong> - add your personality and specific details</p>
+            <p><strong>3. Test different approaches</strong> - track which templates get the best response rates</p>
+            <p><strong>4. Follow up consistently</strong> - most deals close on email 3-5</p>
+        </div>
+
+        <div class="category-title">🎯 Initial Outreach (Templates 1-7)</div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">1</div>
+                <div class="template-name">The Simple Question</div>
+                <div class="template-type">Best for: Any industry</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Quick question about <span class="placeholder">[Company Name]</span></div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    I came across <span class="placeholder">[Company Name]</span> while researching AI solutions for <span class="placeholder">[industry/niche]</span>.<br><br>
+                    I'm curious - how do you currently handle customer acquisition?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">2</div>
+                <div class="template-name">The Value-First Approach</div>
+                <div class="template-type">Best for: Growth-stage companies</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">I help <span class="placeholder">[company type]</span> connect with <span class="placeholder">[target customers]</span></div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    I'm a Connection Broker specializing in connecting AI companies with <span class="placeholder">[target customer type]</span> who need <span class="placeholder">[specific solution]</span>.<br><br>
+                    I've helped similar companies generate 15-30 qualified leads per month without them spending on ads.<br><br>
+                    Worth a brief conversation to see if there's a fit?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">3</div>
+                <div class="template-name">The Specific Compliment</div>
+                <div class="template-type">Best for: Companies with recent news</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Impressed by your <span class="placeholder">[recent achievement/news]</span></div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Saw your <span class="placeholder">[recent news - funding, product launch, award]</span>. Congrats!<br><br>
+                    Quick question: As you scale, are you looking for partners who can connect you with <span class="placeholder">[target customers]</span>?<br><br>
+                    I specialize in making those connections and have helped similar AI companies add $50K+ in monthly revenue through strategic partnerships.<br><br>
+                    Open to a 10-minute call?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">4</div>
+                <div class="template-name">The Problem-Solution</div>
+                <div class="template-type">Best for: Established companies</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Are <span class="placeholder">[target customers]</span> your ideal customers?</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Most AI companies I speak with struggle to reach <span class="placeholder">[target customers]</span> without burning cash on ads.<br><br>
+                    I run a Connection Broker service that matches AI solutions with businesses that need them.<br><br>
+                    My current partners see 10-20 qualified introductions per month.<br><br>
+                    Curious if this could work for <span class="placeholder">[Company Name]</span>?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">5</div>
+                <div class="template-name">The Mutual Connection</div>
+                <div class="template-type">Best for: When you have a shared connection</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">We both know <span class="placeholder">[Mutual Connection]</span></div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    <span class="placeholder">[Mutual Connection]</span> suggested I reach out to you.<br><br>
+                    I'm a Connection Broker who helps AI companies like <span class="placeholder">[similar company they know]</span> connect with <span class="placeholder">[target customers]</span>.<br><br>
+                    Would love to explore if there's a fit with <span class="placeholder">[Company Name]</span>.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">6</div>
+                <div class="template-name">The LinkedIn Connection</div>
+                <div class="template-type">Best for: LinkedIn outreach</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Noticed you're building something interesting in the <span class="placeholder">[AI space/niche]</span>.<br><br>
+                    I'm a Connection Broker - I help AI companies get customers without the marketing spend.<br><br>
+                    Currently working with companies like <span class="placeholder">[Example]</span> to connect them with <span class="placeholder">[target customers]</span>.<br><br>
+                    Would love to connect and explore possibilities.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">7</div>
+                <div class="template-name">The Direct Ask</div>
+                <div class="template-type">Best for: Confident approach</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Partnership opportunity</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    I'm reaching out because I'm looking for AI companies to partner with in the <span class="placeholder">[niche]</span> space.<br><br>
+                    Here's what I do: I connect AI companies with <span class="placeholder">[target customers]</span> who are actively looking for solutions like yours.<br><br>
+                    My partners pay me a monthly fee for qualified introductions - no upfront cost, no risk.<br><br>
+                    Interested in a 15-minute call to discuss?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="category-title">📧 Follow-Up Sequences (Templates 8-14)</div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">8</div>
+                <div class="template-name">Follow-Up #1 (2-3 days)</div>
+                <div class="template-type">Gentle bump</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Re: Quick question about <span class="placeholder">[Company Name]</span></div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Wanted to bump this to the top of your inbox.<br><br>
+                    Quick question: Are you currently looking for ways to connect with more <span class="placeholder">[target customers]</span>?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">9</div>
+                <div class="template-name">Follow-Up #2 (5-7 days)</div>
+                <div class="template-type">Add value</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Saw this and thought of you</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Saw this article about <span class="placeholder">[relevant industry trend/news]</span> and thought you'd find it interesting: <span class="placeholder">[link]</span><br><br>
+                    Also wanted to check if you saw my earlier message about connecting you with <span class="placeholder">[target customers]</span>?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">10</div>
+                <div class="template-name">Follow-Up #3 (10-14 days)</div>
+                <div class="template-type">Social proof</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Just helped a similar company</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Just finished helping <span class="placeholder">[Similar Company]</span> connect with 3 new <span class="placeholder">[target customer type]</span> this month.<br><br>
+                    Realized you might benefit from the same approach.<br><br>
+                    Worth a 10-minute conversation?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">11</div>
+                <div class="template-name">The Breakup Email</div>
+                <div class="template-type">Final attempt</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Should I close your file?</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    I've reached out a few times about connecting you with <span class="placeholder">[target customers]</span>.<br><br>
+                    Haven't heard back, so I'm assuming timing isn't right or this isn't a priority.<br><br>
+                    Totally fine - should I close your file, or is there a better time to reconnect?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="category-title">🎯 Objection Handlers (Templates 12-17)</div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">12</div>
+                <div class="template-name">"We have a sales team"</div>
+                <div class="template-type">Common objection</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Totally understand - most of my partners have sales teams too.<br><br>
+                    Think of me as an additional channel, not a replacement. I find opportunities your team might miss and warm them up before handing them over.<br><br>
+                    Happy to do a 30-day trial so you can see the difference.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">13</div>
+                <div class="template-name">"We're not looking for partners"</div>
+                <div class="template-type">Common objection</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Got it - if your pipeline is full and you're hitting all your targets, then we might not be a fit.<br><br>
+                    But if there's any gap between where you are and where you want to be, a 10-minute call could be worth it.<br><br>
+                    No pressure either way.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">14</div>
+                <div class="template-name">"What's your fee?"</div>
+                <div class="template-type">Pricing question</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    My fee depends on the scope, but most of my partners are in the $1,000-$5,000/month range for 10-20 qualified introductions.<br><br>
+                    The ROI is typically 5-10x within the first 90 days.<br><br>
+                    Want to jump on a quick call to discuss specifics for <span class="placeholder">[Company Name]</span>?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">15</div>
+                <div class="template-name">"Send me more info"</div>
+                <div class="template-type">Stalling</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Happy to send details, but I've found a 10-minute call is more efficient than back-and-forth emails.<br><br>
+                    How's Tuesday or Wednesday for a brief chat?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="category-title">🤝 Closing Templates (Templates 16-20)</div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">16</div>
+                <div class="template-name">Post-Call Follow-Up</div>
+                <div class="template-type">After discovery call</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Next steps - <span class="placeholder">[Company Name]</span> partnership</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Thanks for the call today.<br><br>
+                    Excited about the potential to connect you with <span class="placeholder">[target customers]</span>.<br><br>
+                    As discussed, I'll send over a simple 1-page agreement for the 30-day pilot at $X/month.<br><br>
+                    Once that's signed, we can get started immediately.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">17</div>
+                <div class="template-name">The Trial Close</div>
+                <div class="template-type">Reduce risk</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Totally understand wanting to test this before committing long-term.<br><br>
+                    How about this: Let's do a 30-day pilot. You pay $X for the first month. If you're not happy with the results, we part ways. If you are, we continue.<br><br>
+                    Fair enough?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">18</div>
+                <div class="template-name">Urgency Close</div>
+                <div class="template-type">Limited spots</div>
+            </div>
+            <div class="template-body">
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Wanted to give you a heads up - I'm limiting my partnerships to 5 companies per niche to ensure quality.<br><br>
+                    Currently at 4 in <span class="placeholder">[niche]</span>.<br><br>
+                    If you're interested, should we lock this in this week?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">19</div>
+                <div class="template-name">Referral Request</div>
+                <div class="template-type">Expand network</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Quick favor?</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Even if we're not a fit right now, I appreciate you taking the time to chat.<br><br>
+                    Quick question: Do you know any other AI companies in <span class="placeholder">[niche]</span> who might benefit from connecting with <span class="placeholder">[target customers]</span>?<br><br>
+                    Happy to return the favor.<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="template">
+            <div class="template-header">
+                <div class="template-number">20</div>
+                <div class="template-name">The Stay in Touch</div>
+                <div class="template-type">Long-term nurture</div>
+            </div>
+            <div class="template-body">
+                <div class="subject-line">Let's reconnect in a few months</div>
+                <div class="email-body">
+                    Hi <span class="placeholder">[First Name]</span>,<br><br>
+                    Totally understand timing isn't right right now.<br><br>
+                    Mind if I check back in <span class="placeholder">[3-6 months]</span>? Things change fast in your industry.<br><br>
+                    In the meantime, I'll send you the occasional valuable resource (no sales pitch).<br><br>
+                    Sound good?<br><br>
+                    <span class="placeholder">[Your Name]</span>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+            </div>
+        </div>
+
+        <div class="usage-guide">
+            <h4>🎯 Pro Tips for Maximum Results:</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Track everything:</strong> Note which templates get the best response rates</li>
+                <li><strong>A/B test subjects:</strong> Try different subject lines with the same body</li>
+                <li><strong>Personalize:</strong> Never send generic templates - always customize</li>
+                <li><strong>Follow up:</strong> 80% of deals close after email 3-5</li>
+                <li><strong>Time it right:</strong> Send Tuesday-Thursday, 9-11 AM for best open rates</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #666; font-size: 12px;">
+            © 2025 DVH Ventures LLC - For AI Partner Method Members Only
+        </div>
+    </div>
+
+    <script>
+        function copyTemplate(btn) {
+            const template = btn.previousElementSibling;
+            const text = template.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy Template', 2000);
+            });
+        }
+    </script>
+</body>
+</html>
