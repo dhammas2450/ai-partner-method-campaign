@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Partner Method Bonuses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        .success-banner {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(34,197,94,0.3);
+        }
+        .success-banner h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .success-banner p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .intro h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .intro p {
+            color: rgba(255,255,255,0.7);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .bonus-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .bonus-item {
+            background: rgba(0,0,0,0.4);
+            border: 2px solid rgba(189,50,53,0.3);
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            transition: all 0.3s ease;
+        }
+        .bonus-item:hover {
+            border-color: rgba(189,50,53,0.6);
+            transform: translateX(5px);
+        }
+        .bonus-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #bd3235, #9d292c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .bonus-content {
+            flex: 1;
+        }
+        .bonus-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .bonus-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 15px;
+        }
+        .bonus-value {
+            display: inline-block;
+            background: rgba(189,50,53,0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #bd3235, #9d292c);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(189,50,53,0.4);
+        }
+
+        .next-steps {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        .next-steps h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .next-steps ol {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.8);
+        }
+        .next-steps li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .next-steps strong {
+            color: #bd3235;
+        }
+
+        .support {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            text-align: center;
+        }
+        .support h4 {
+            margin-bottom: 10px;
+        }
+        .support a {
+            color: #bd3235;
+            text-decoration: none;
+        }
+
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #bd3235;
+            animation: fall 3s linear forwards;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confetti" id="confetti"></div>
+
+    <div class="container">
+        <div class="success-banner">
+            <h1>🎉 Welcome! Your Purchase Is Complete</h1>
+            <p>Your AI Partner Method bonuses are ready for download below</p>
+        </div>
+
+        <div class="intro">
+            <h2>Here's Your Exclusive Bonus Package</h2>
+            <p>These bonuses are specifically designed to help you implement the AI Partner Method faster and start landing partners in record time.</p>
+        </div>
+
+        <div class="bonus-list">
+            <div class="bonus-item">
+                <div class="bonus-number">1</div>
+                <div class="bonus-content">
+                    <span class="bonus-value">$497 VALUE</span>
+                    <h3>Fast-Start Partner Acquisition System</h3>
+                    <p>Step-by-step system to land your first AI company partner in 7 days. Includes prospecting spreadsheet, qualification checklist, and first contact scripts.</p>
+                    <a href="#" class="download-btn">Download Bonus #1 →</a>
+                </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-number">2</div>
+                <div class="bonus-content">
+                    <span class="bonus-value">$297 VALUE</span>
+                    <h3>Connection Broker Pricing Calculator</h3>
+                    <p>Interactive tool that calculates exactly what to charge each partner based on their size, needs, and your experience level. Never undercharge again.</p>
+                    <a href="#" class="download-btn">Download Bonus #2 →</a>
+                </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-number">3</div>
+                <div class="bonus-content">
+                    <span class="bonus-value">$397 VALUE</span>
+                    <h3>90-Day Scaling Roadmap & Tracker</h3>
+                    <p>Week-by-week plan to go from first partner to $10K/month with progress tracking dashboard and milestone checklist.</p>
+                    <a href="#" class="download-btn">Download Bonus #3 →</a>
+                </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-number">4</div>
+                <div class="bonus-content">
+                    <span class="bonus-value">$197 VALUE</span>
+                    <h3>The "Quick Win" Outreach Swipe File</h3>
+                    <p>20 proven outreach messages that have landed 6-figure AI partnership deals. Copy, paste, and customize for your niche.</p>
+                    <a href="#" class="download-btn">Download Bonus #4 →</a>
+                </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-number">5</div>
+                <div class="bonus-content">
+                    <span class="bonus-value">$997 VALUE</span>
+                    <h3>Private Connection Broker Community Access</h3>
+                    <p>Join other Connection Brokers sharing what's working now. Weekly Q&A calls, deal opportunity sharing, and accountability partners.</p>
+                    <a href="#" class="download-btn">Join Community →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h3>🚀 Your Next Steps</h3>
+            <ol>
+                <li><strong>Access the main AI Partner Method training</strong> — Check your email for login details from Philip Johansen's team</li>
+                <li><strong>Download your bonuses above</strong> — Start with the Fast-Start Partner Acquisition System</li>
+                <li><strong>Join the private community</strong> — Introduce yourself and connect with other Connection Brokers</li>
+                <li><strong>Schedule your first 30 minutes</strong> — Block time tomorrow to go through Module 1</li>
+                <li><strong>Take action within 48 hours</strong> — Momentum is everything. Don't let this sit.</li>
+            </ol>
+            <p style="color: rgba(255,255,255,0.6); font-size: 14px;">Questions about your bonuses? Contact support below.</p>
+        </div>
+
+        <div class="support">
+            <h4>Need Help?</h4>
+            <p>If you have any issues accessing your bonuses, email me directly:</p>
+            <p style="margin-top: 10px;"><a href="mailto:dvhventuresllc@gmail.com">dvhventuresllc@gmail.com</a></p>
+            <p style="margin-top: 15px; font-size: 14px; color: rgba(255,255,255,0.5);">I typically respond within 24 hours</p>
+        </div>
+    </div>
+
+    <script>
+        // Confetti animation
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#bd3235', '#9d292c', '#22c55e', '#fbbf24', '#3b82f6'];
+            
+            for (let i = 0; i < 50; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.animationDelay = Math.random() * 3 + 's';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confettiContainer.appendChild(piece);
+            }
+        }
+        createConfetti();
+    </script>
+
+</body>
+</html>

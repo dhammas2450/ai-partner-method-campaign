@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Partner Method - Become a Connection Broker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 50%, #000 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(189,50,53,0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #bd3235, #9d292c);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(189,50,53,0.5); }
+            50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(189,50,53,0.8); }
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        .hero h1 span { color: #bd3235; }
+        .hero-subheadline {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255,255,255,0.8);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #bd3235, #9d292c);
+            color: #fff;
+            padding: 20px 60px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(189,50,53,0.4);
+        }
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(189,50,53,0.6);
+        }
+        .hero-guarantee {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+        .section-title {
+            text-align: center;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        .section-title span { color: #bd3235; }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .problem-card {
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(189,50,53,0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(189,50,53,0.5);
+            box-shadow: 0 20px 60px rgba(189,50,53,0.2);
+        }
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .problem-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #bd3235;
+        }
+        .problem-card p { color: rgba(255,255,255,0.7); }
+
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #000 0%, #0f0f1e 100%);
+            text-align: center;
+        }
+        .solution-text {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature-check {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #bd3235, #9d292c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .feature-item h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Bonuses Section */
+        .bonuses {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+        }
+        .bonuses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .bonus-card {
+            background: rgba(0,0,0,0.4);
+            border: 2px solid rgba(189,50,53,0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .bonus-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #bd3235, #9d292c);
+        }
+        .bonus-value {
+            display: inline-block;
+            background: #bd3235;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .bonus-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .bonus-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+        }
+        .total-value {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(189,50,53,0.2), rgba(157,41,44,0.2));
+            border-radius: 20px;
+            border: 2px solid rgba(189,50,53,0.5);
+        }
+        .total-value h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .total-value .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #bd3235;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: #000;
+            text-align: center;
+        }
+        .urgency-box {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(189,50,53,0.2), rgba(157,41,44,0.2));
+            border: 2px solid rgba(189,50,53,0.5);
+            border-radius: 15px;
+        }
+        .urgency-box p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .urgency-box strong {
+            color: #bd3235;
+            font-size: 24px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background: #0a0a0a;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+        }
+        .footer a { color: rgba(255,255,255,0.6); }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">⚡ The AI Gold Rush Is Here</div>
+            <h1>How To Partner With <span>Million-Dollar Companies</span> And Become Their $11,490/Month AI Solution</h1>
+            <p class="hero-subheadline">
+                The "Connection Broker" method that's helping ordinary people make $10,233+/month <br>
+                with just 30 minutes a day... <strong>WITHOUT coding, tech skills, or a following</strong>
+            </p>
+            <a href="https://www.aipartnermethod.com/success-with-donald-hammas" class="hero-cta">Get The AI Partner Method →</a>
+            <p class="hero-guarantee">✓ 30-Day Money-Back Guarantee • ✓ Instant Access • ✓ Beginner Friendly</p>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">The <span>Problem</span> With Most "AI Opportunities"</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😵</div>
+                    <h3>Too Technical</h3>
+                    <p>Most AI opportunities require coding, complex setups, or technical skills that take months to learn</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Too Time-Consuming</h3>
+                    <p>Building AI tools or products takes 40+ hours a week — who has time for that?</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>No Following = No Sales</h3>
+                    <p>Most methods require a big audience, email list, or social media following to make money</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title">Introducing The <span>Connection Broker</span> Model</h2>
+            <p class="solution-text">
+                Instead of <strong>building</strong> AI tools (hard, expensive, time-consuming)...<br><br>
+                You simply <strong>partner</strong> with companies that already built them and get paid to connect them with businesses that need their solutions.<br><br>
+                <strong>No coding. No product. No audience required.</strong>
+            </p>
+            <a href="https://www.aipartnermethod.com/success-with-donald-hammas" class="hero-cta">See How It Works →</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What You Get With <span>AI Partner Method</span></h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>The 4-Step Blueprint</h4>
+                        <p>Complete roadmap from zero to $10K+/month as a Connection Broker</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>Partner Acquisition System</h4>
+                        <p>How to find and land AI company partners who pay monthly</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>Deal Closing Scripts</h4>
+                        <p>Exact words to use when reaching out to potential partners</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>Pricing Framework</h4>
+                        <p>How to charge $1,000-$10,000+ per partner (without being pushy)</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>30-Min/Day Structure</h4>
+                        <p>The exact daily routine that keeps partners paying month after month</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div>
+                        <h4>Scaling System</h4>
+                        <p>How to go from 1 partner to 5+ partners without working more hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses -->
+    <section class="bonuses">
+        <div class="container">
+            <h2 class="section-title">Plus <span>$2,385</span> In Exclusive Bonuses</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: rgba(255,255,255,0.7);">When you join through this page, you get these exclusive bonuses FREE:</p>
+            <div class="bonuses-grid">
+                <div class="bonus-card">
+                    <div class="bonus-value">$497 VALUE</div>
+                    <h3>Fast-Start Partner Acquisition System</h3>
+                    <p>Step-by-step system to land your first AI company partner in 7 days. Includes prospecting spreadsheet, qualification checklist, and first contact scripts.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-value">$297 VALUE</div>
+                    <h3>Connection Broker Pricing Calculator</h3>
+                    <p>Interactive tool that calculates exactly what to charge each partner based on their size, needs, and your experience level.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-value">$397 VALUE</div>
+                    <h3>90-Day Scaling Roadmap & Tracker</h3>
+                    <p>Week-by-week plan to go from first partner to $10K/month with progress tracking dashboard.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-value">$197 VALUE</div>
+                    <h3>The "Quick Win" Outreach Swipe File</h3>
+                    <p>20 proven outreach messages that have landed 6-figure AI partnership deals.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-value">$997 VALUE</div>
+                    <h3>Private Connection Broker Community</h3>
+                    <p>Access to other Connection Brokers sharing what's working now. Weekly Q&A calls and deal opportunity sharing.</p>
+                </div>
+            </div>
+            <div class="total-value">
+                <h3>Total Bonus Package Value:</h3>
+                <div class="price">$2,385</div>
+                <p style="margin-top: 15px; color: rgba(255,255,255,0.8);">✓ Yours FREE when you join AI Partner Method today</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Ready To Become An <span>AI Connection Broker</span>?</h2>
+            <div class="urgency-box">
+                <p><strong>Limited Time:</strong> These bonuses are only available through this page and may be removed at any time.</p>
+                <p style="font-size: 16px; margin-top: 15px;">Join <strong>5,200+</strong> people already using this system</p>
+            </div>
+            <a href="https://www.aipartnermethod.com/success-with-donald-hammas" class="hero-cta">Get Instant Access Now →</a>
+            <p style="margin-top: 30px; color: rgba(255,255,255,0.5);">
+                🔒 30-Day Money-Back Guarantee • Instant Digital Delivery • Secure Checkout
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DVH Ventures LLC. All rights reserved.</p>
+            <p style="margin-top: 10px;">This is an independent affiliate promotion. Not endorsed by or affiliated with Philip Johansen.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
